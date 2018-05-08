@@ -1,0 +1,392 @@
+[
+  {
+    "img": "images/recomt1.png",
+    "title":"猫咪主粮",
+    "span": [
+      {
+        "img": "images/recoms1.jpg",
+        "tip": "进口猫粮"
+      },
+      {
+        "img": "images/recoms2.jpg",
+        "tip": "国产猫粮"
+      },
+      {
+        "img": "images/recoms3.jpg",
+        "tip": "拆零试吃"
+      },
+      {
+        "img": "images/recoms4.jpg",
+        "tip": "处方猫粮"
+      }
+    ],
+    "imgl": "images/recoml1.jpg",
+    "us": [
+      {
+        "img": "images/recomu1.jpg",
+        "tip": "原装猫粮 买1赠1",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu2.jpg",
+        "tip": "尽享世界美食 低价换购零食",
+        "price": "110.00"
+      },
+      {
+        "img": "images/recomu3.jpg",
+        "tip": "福摩猫粮 百年历史沉淀",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu4.jpg",
+        "tip": "折扣低到家 买粮赠罐头",
+        "price": "220.00"
+      },
+      {
+        "img": "images/recomu5.jpg",
+        "tip": "冠能 特惠专场 有买有送",
+        "price": "160.00"
+      },
+      {
+        "img": "images/recomu6.jpg",
+        "tip": "买1送1 全方位护猫起航",
+        "price": "132.00"
+      },
+      {
+        "img": "images/recomu7.jpg",
+        "tip": "精致宠物膳食 超级实惠",
+        "price": "39.00"
+      },
+      {
+        "img": "images/recomu8.jpg",
+        "tip": "无谷成猫粮 开学福利",
+        "price": "125.00"
+      }
+    ]
+  },
+  {
+    "img": "images/recomt2.png",
+    "title":"猫咪零食",
+    "span": [
+      {
+        "img": "images/recoms5.jpg",
+        "tip": "罐头食粮"
+      },
+      {
+        "img": "images/recoms6.jpg",
+        "tip": "美味零食"
+      },
+      {
+        "img": "images/recoms7.jpg",
+        "tip": "专用零食"
+      },
+      {
+        "img": "images/recoms8.jpg",
+        "tip": "猫草薄荷"
+      }
+    ],
+    "imgl": "images/recoml2.jpg",
+    "us": [
+      {
+        "img": "images/recomu9.jpg",
+        "tip": "满15元送10元罐头盖",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu10.jpg",
+        "tip": "满5罐 5折换购【百利冻干肉",
+        "price": "110.00"
+      },
+      {
+        "img": "images/recomu11.jpg",
+        "tip": "出口品质 泰国生产 买即送肉条",
+        "price": "29.00"
+      },
+      {
+        "img": "images/recomu12.jpg",
+        "tip": "折扣低到家 买粮赠罐头",
+        "price": "20.00"
+      },
+      {
+        "img": "images/recomu13.jpg",
+        "tip": "养生零食 天然食材 限时9.9元2袋",
+        "price": "160.00"
+      },
+      {
+        "img": "images/recomu14.jpg",
+        "tip": "买1送1 全方位护猫起航",
+        "price": "13.00"
+      },
+      {
+        "img": "images/recomu15.jpg",
+        "tip": "专享零食 满19减4 满69减15",
+        "price": "40.00"
+      },
+      {
+        "img": "images/recomu16.jpg",
+        "tip": "无谷成猫粮 开学福利",
+        "price": "12.00"
+      }
+    ]
+  },
+  {
+    "img": "images/recomt3.png",
+    "title":"猫咪保健&医疗",
+    "span": [
+      {
+        "img": "images/recoms1.jpg",
+        "tip": "进口猫粮"
+      },
+      {
+        "img": "images/recoms2.jpg",
+        "tip": "国产猫粮"
+      },
+      {
+        "img": "images/recoms3.jpg",
+        "tip": "拆零试吃"
+      },
+      {
+        "img": "images/recoms4.jpg",
+        "tip": "处方猫粮"
+      }
+    ],
+    "imgl": "images/recoml3.jpg",
+    "us": [
+      {
+        "img": "images/recomu1.jpg",
+        "tip": "原装猫粮 买1赠1",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu2.jpg",
+        "tip": "尽享世界美食 低价换购零食",
+        "price": "110.00"
+      },
+      {
+        "img": "images/recomu3.jpg",
+        "tip": "福摩猫粮 百年历史沉淀",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu4.jpg",
+        "tip": "折扣低到家 买粮赠罐头",
+        "price": "220.00"
+      },
+      {
+        "img": "images/recomu5.jpg",
+        "tip": "冠能 特惠专场 有买有送",
+        "price": "160.00"
+      },
+      {
+        "img": "images/recomu6.jpg",
+        "tip": "买1送1 全方位护猫起航",
+        "price": "132.00"
+      },
+      {
+        "img": "images/recomu7.jpg",
+        "tip": "精致宠物膳食 超级实惠",
+        "price": "39.00"
+      },
+      {
+        "img": "images/recomu8.jpg",
+        "tip": "无谷成猫粮 开学福利",
+        "price": "125.00"
+      }
+    ]
+  },
+  {
+    "img": "images/recomt4.png",
+    "title":"猫咪日用",
+    "span": [
+      {
+        "img": "images/recoms5.jpg",
+        "tip": "罐头食粮"
+      },
+      {
+        "img": "images/recoms6.jpg",
+        "tip": "美味零食"
+      },
+      {
+        "img": "images/recoms7.jpg",
+        "tip": "专用零食"
+      },
+      {
+        "img": "images/recoms8.jpg",
+        "tip": "猫草薄荷"
+      }
+    ],
+    "imgl": "images/recoml4.jpg",
+    "us": [
+      {
+        "img": "images/recomu9.jpg",
+        "tip": "满15元送10元罐头盖",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu10.jpg",
+        "tip": "满5罐 5折换购【百利冻干肉",
+        "price": "110.00"
+      },
+      {
+        "img": "images/recomu11.jpg",
+        "tip": "出口品质 泰国生产 买即送肉条",
+        "price": "29.00"
+      },
+      {
+        "img": "images/recomu12.jpg",
+        "tip": "折扣低到家 买粮赠罐头",
+        "price": "20.00"
+      },
+      {
+        "img": "images/recomu13.jpg",
+        "tip": "养生零食 天然食材 限时9.9元2袋",
+        "price": "160.00"
+      },
+      {
+        "img": "images/recomu14.jpg",
+        "tip": "买1送1 全方位护猫起航",
+        "price": "13.00"
+      },
+      {
+        "img": "images/recomu15.jpg",
+        "tip": "专享零食 满19减4 满69减15",
+        "price": "40.00"
+      },
+      {
+        "img": "images/recomu16.jpg",
+        "tip": "无谷成猫粮 开学福利",
+        "price": "12.00"
+      }
+    ]
+  },
+  {
+    "img": "images/recomt5.png",
+    "title":"猫咪香波&日用",
+    "span": [
+      {
+        "img": "images/recoms1.jpg",
+        "tip": "进口猫粮"
+      },
+      {
+        "img": "images/recoms2.jpg",
+        "tip": "国产猫粮"
+      },
+      {
+        "img": "images/recoms3.jpg",
+        "tip": "拆零试吃"
+      },
+      {
+        "img": "images/recoms4.jpg",
+        "tip": "处方猫粮"
+      }
+    ],
+    "imgl": "images/recoml5.jpg",
+    "us": [
+      {
+        "img": "images/recomu1.jpg",
+        "tip": "原装猫粮 买1赠1",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu2.jpg",
+        "tip": "尽享世界美食 低价换购零食",
+        "price": "110.00"
+      },
+      {
+        "img": "images/recomu3.jpg",
+        "tip": "福摩猫粮 百年历史沉淀",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu4.jpg",
+        "tip": "折扣低到家 买粮赠罐头",
+        "price": "220.00"
+      },
+      {
+        "img": "images/recomu5.jpg",
+        "tip": "冠能 特惠专场 有买有送",
+        "price": "160.00"
+      },
+      {
+        "img": "images/recomu6.jpg",
+        "tip": "买1送1 全方位护猫起航",
+        "price": "132.00"
+      },
+      {
+        "img": "images/recomu7.jpg",
+        "tip": "精致宠物膳食 超级实惠",
+        "price": "39.00"
+      },
+      {
+        "img": "images/recomu8.jpg",
+        "tip": "无谷成猫粮 开学福利",
+        "price": "125.00"
+      }
+    ]
+  },
+  {
+    "img": "images/recomt6.png",
+    "title":"猫咪牵引&服饰&玩具",
+    "span": [
+      {
+        "img": "images/recoms5.jpg",
+        "tip": "罐头食粮"
+      },
+      {
+        "img": "images/recoms6.jpg",
+        "tip": "美味零食"
+      },
+      {
+        "img": "images/recoms7.jpg",
+        "tip": "专用零食"
+      },
+      {
+        "img": "images/recoms8.jpg",
+        "tip": "猫草薄荷"
+      }
+    ],
+    "imgl": "images/recoml6.jpg",
+    "us": [
+      {
+        "img": "images/recomu9.jpg",
+        "tip": "满15元送10元罐头盖",
+        "price": "219.00"
+      },
+      {
+        "img": "images/recomu10.jpg",
+        "tip": "满5罐 5折换购【百利冻干肉",
+        "price": "110.00"
+      },
+      {
+        "img": "images/recomu11.jpg",
+        "tip": "出口品质 泰国生产 买即送肉条",
+        "price": "29.00"
+      },
+      {
+        "img": "images/recomu12.jpg",
+        "tip": "折扣低到家 买粮赠罐头",
+        "price": "20.00"
+      },
+      {
+        "img": "images/recomu13.jpg",
+        "tip": "养生零食 天然食材 限时9.9元2袋",
+        "price": "160.00"
+      },
+      {
+        "img": "images/recomu14.jpg",
+        "tip": "买1送1 全方位护猫起航",
+        "price": "13.00"
+      },
+      {
+        "img": "images/recomu15.jpg",
+        "tip": "专享零食 满19减4 满69减15",
+        "price": "40.00"
+      },
+      {
+        "img": "images/recomu16.jpg",
+        "tip": "无谷成猫粮 开学福利",
+        "price": "12.00"
+      }
+    ]
+  }
+]

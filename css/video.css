@@ -1,0 +1,255 @@
+@charset "utf-8";
+#topbar{
+    position: fixed;
+    top:0;
+    left: 0;
+}
+#head1{
+    margin-top: 30px;
+}
+.videoBox{
+    width: 100%;
+    height: 88px;
+    z-index: 22;
+}
+.lay_box{
+    width: 100%;
+    height: 83px;
+    background: #fff url(../images/video/cmall-bg1.png)50% 0 no-repeat;
+}
+.lay_se{
+    background-position: 50% -93px;
+}
+.lay_se_six{
+ padding: 28px 0 0;
+}
+.lay_se_six li{
+    float: left;
+    margin: 0 0 0 75px;
+}
+.lay_se_six li a{
+    display: block;
+    color: #666;
+}
+.lay_se_six li a:hover b{
+    color: #0f0;
+}
+.vertical{
+    vertical-align: middle;
+}
+.lay_se_six li a b{
+    font-size: 16px;
+    vertical-align: middle;
+}
+.cmll_banner{
+    height: 403px;
+    background: url(../images/video/cmall-bannerBg.jpg) 50% 0 no-repeat;
+    padding-top: 29px;
+}
+.Bg_banner{
+    background-position: 50% -452px;
+}
+.Bg_banner .Left_box{
+    width: 600px;
+    height: 340px;
+    position: absolute;
+    left: 0;
+    top:19px;
+    box-shadow:2px 2px 5px rgba(0,0,0,.4);
+    background: url(../images/video/cmvideoBg.png) 0 0 no-repeat;
+}
+.Bg_banner .Left_box img{
+    display: block;
+    width: 600px;
+    height: 340px;
+}
+.Bg_banner .Left_box video {
+    width: 100%;
+    height: 100%;
+     display: none;
+}
+.Bg_banner .Left_box video.ding{
+    position: absolute;
+    top: 0;
+    z-index: 333px;
+    display: block;
+}
+.Bg_banner .cmplayIco {
+    top: 50%;
+    margin-top: -25px;
+}
+.Left_box .cmplayIco {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-position: -72px -39px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+}
+.cmNavList li span, .cmIcon {
+    background: url(../images/video/cmall-ico.png) 0 0 no-repeat;
+}
+.Bg_banner .Right_box{
+    width: 477px;
+    height: 375px;
+    background: #fff;
+    padding: 0 0 0 286px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.4);
+}
+.sliderBox{
+    width: 340px;
+    height: 374px;
+    overflow: hidden;
+    position: relative;
+}
+.slider-scroll .sliderList,
+.slider-items .sliderList,
+.slider-items-up .sliderList {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.slider-items .sliderList li {
+    float: left;
+    display: inline;
+    padding: 0 5px;
+    width: 100px;
+}
+.Bg_banner .slider-items .sliderList li {
+    width: 340px;
+    padding: 53px 0 0;
+}
+.cmTit1 {
+    display: block;
+    font-size: 20px;
+    height: 54px;
+}
+.cmTextCon {
+    height: 96px;
+    padding-top: 15px;
+}
+.cmNum {
+    font-size: 24px;
+    font-weight: 700;
+}
+.cmNum span {
+    font-size: 36px;
+}
+.cmLayer2 {
+    padding: 9px 0 0 58px;
+}
+.cmBtn1 {
+    display: inline-block;
+    height: 48px;
+    border: #f03e3e solid 1px;
+    background: #fdebeb;
+    padding: 0 30px;
+    line-height: 48px;
+    font-size: 18px;
+    color: #f03e3e;
+}
+.cmBtn2 {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    background: #f03e3e;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 30px;
+}
+.cmCartIco {
+    display: inline-block;
+    width: 19px;
+    height: 18px;
+    background-position: 0 -39px;
+    vertical-align: -1px;
+}
+.Bg_banner .slider-items .sliderList li a:hover{
+    background-color: #f03e3e;
+    opacity: .9;
+    color: #fff;
+}
+.cmTit2{
+    height: 22px;
+    background: url(../images/video/cmall-titBg.png) 0 50% repeat-x;
+}
+.cmTitText{
+    height: 22px;
+    background: #fff;
+    line-height: 22px;
+    font-size: 18px;
+    padding: 0 18px 0 0;
+}
+.cmTitText span{
+    display: inline-block;
+    width: 7px;
+}
+.cmList1 {
+    margin: 0 0 0 -18px;
+}
+.cmList1 li {
+    float: left;
+    width: 388px;
+    margin: 18px 0 0 18px;
+}
+.cmList1 li a{
+    display: block;
+    position: relative;
+}
+.cmList1 li .imgBox {
+    display: block;
+    height: 218px;
+    overflow: hidden;
+}
+.cmList1 li img {
+    width: 388px;
+    height: 218px;
+    display: block;
+}
+.cmList1 li p {
+    height: 40px;
+    background: #f2f2f2;
+    line-height: 40px;
+    color: #333;
+    padding: 0 10px;
+}
+.cmList1 li p .fl {
+    width: 295px;
+}
+.textover {
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+}
+.cmviewIco {
+    display: inline-block;
+    width: 14px;
+    height: 11px;
+    background-position: -47px -39px;
+    vertical-align: -1px;
+}
+.cmList1 .cmplayIco {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-position: -72px -39px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 84px;
+}
+.cmTitText span {
+    display: inline-block;
+    width: 7px;
+     height: 18px;
+    background-position: -29px -39px;
+    margin-right: 18px;
+    vertical-align: -2px;
+}
+.cmCon .cmTitText span {
+    background-position: -129px -39px;
+}
+

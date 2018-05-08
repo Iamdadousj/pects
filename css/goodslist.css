@@ -1,0 +1,497 @@
+.pet-onav {
+    margin: 10px 0px;
+}
+
+.onav-cont {
+    border: 1px solid #ddd;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    display: inline-block;
+    padding: 0 25px 0 8px;
+    background: #fff;
+}
+
+.onav-cont span {
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 50px;
+    cursor: pointer;
+}
+
+.onav-cont .gnum {
+    color: #999;
+    padding-left: 5px;
+}
+
+.onav-cont b {
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: url("../images/bg2.png") -38px -1258px;
+    right: 15px;
+    top: 10px;
+}
+
+.pet-onav label {
+    display: inline-block;
+    background: url("../images/bg2.png") -38px -1265px;
+    width: 5px;
+    height: 9px;
+    margin: 0 10px;
+}
+
+.onav-cont ul {
+    position: absolute;
+    top: 24px;
+    left: -1px;
+    width: 100%;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 5px 0;
+    display: none;
+    z-index: 150;
+}
+
+.onav-cont:hover ul {
+    display: block;
+}
+
+.onav-cont li {
+    line-height: 22px;
+    height: 22px;
+    overflow: hidden;
+    text-indent: 18px;
+    border-bottom: 1px dashed #eee;
+}
+
+.gcl {
+    background-color: #FFF;
+    border: 1px #ddd solid;
+}
+
+.gcl h2 {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px #ddd dotted;
+}
+
+.gcl-li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    border-bottom: 1px #ddd dotted;
+}
+
+.gcl-li a img {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+.gcl-li a span {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.gcl-li a.hov {
+    color: #F60;
+    font-weight: bold;
+    background: url("../images/goods/ar.png") right no-repeat;
+}
+
+.box {
+    height: 100%;
+    border: 1px solid #DDDDDD;
+    background-color: #FFF;
+    overflow: hidden;
+}
+
+.sbtn, .sbtn span {
+    background: #9d7af4;
+}
+
+.sbtn {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.sbtn span {
+    padding-left: 20px;
+    color: #FFF;
+    font-size: 17px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.box h2, .box h1 {
+    border-bottom: 2px solid #ac92ec;
+    height: 30px;
+    line-height: 30px;
+    background-color: #FFF;
+}
+
+.box h2 span, .box h1 span {
+    display: block;
+    float: left;
+    padding-left: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filter_box {
+    padding: 20px;
+}
+
+.filter_box table {
+    margin-bottom: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+
+.filter_box td .fil-li a:hover span, .filter_box td .fil-li a.ahov span {
+    color: #ff6302;
+}
+
+.filter_box td .fil-li a span {
+    display: inline;
+    background: none;
+    float: none;
+    padding: 0;
+}
+
+.filter_box td a span {
+    float: left;
+    cursor: pointer;
+}
+
+.filter_box th {
+    width: 80px;
+    text-align: right;
+    color: #999;
+}
+
+.filter_box th, .filter_box td {
+    border-bottom: 1px #EFEFEF dashed;
+    vertical-align: top;
+    line-height: 20px;
+    padding: 10px 0 0 0;
+}
+
+.fil-max {
+
+    height: 118px;
+    padding-bottom: 1px;
+    overflow: hidden;
+    width: 749px;
+    position: relative;
+    margin-top: -5px;
+    z-index: 20;
+    border: #fff solid 1px;
+}
+
+.filter_box td .fil-li {
+    float: left;
+    display: inline;
+    margin: 0 -1px -1px 0;
+    position: relative;
+    z-index: 10;
+    width: 121px;
+    height: 38px;
+    border: #ddd solid 1px;
+}
+
+.filter_box td .fil-li a:hover, .filter_box td .fil-li a.ahov {
+    background: #fff6ef;
+}
+
+.filter_box td .fil-li a {
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 0;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.filter_box td a {
+    line-height: 20px;
+    padding-right: 8px;
+    padding-left: 8px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+a.ahov, .filter_box td > a:hover {
+    background-color: #f60;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+    color: #FFFFFF;
+    height: 20px;
+    line-height: 20px;
+}
+
+.gdmenu-out {
+    height: 53px;
+}
+
+#gdmenu {
+    width: 978px;
+}
+
+.lis_pl {
+    position: relative;
+    z-index: 100;
+}
+
+.lis_pll, .lis_plr {
+    line-height: 29px;
+}
+
+.paixufl {
+    height: 53px;
+}
+
+.paixufl span.nobg:hover, .paixufl span.nobg.current {
+    background: #7e32a9;
+    color: #fff;
+}
+
+.paixufl span.arrow {
+    background-position: 34px 4px;
+}
+
+.paixufl span {
+    height: 53px;
+    border-right: 1px solid #ddd;
+    display: block;
+    float: left;
+    padding: 0 23px 0 18px;
+    line-height: 53px;
+    cursor: pointer;
+    background: url("../images/goods/catpaixu-ico.png") no-repeat;
+}
+
+.paixufl span.pxpriceup {
+    background-position: 34px -172px;
+}
+
+.checkBox {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-position: 0 -322px;
+}
+
+.paixufl span.nobg {
+    background: none;
+}
+
+.lis_plr {
+    width: 300px;
+}
+
+.lis_pll, .lis_plr {
+    line-height: 29px;
+}
+
+.lis_plr a {
+    padding: 0px 10px;
+    border: 1px solid #ddd;
+    float: right;
+    background: #eee;
+    margin-left: 10px;
+}
+
+.list_box {
+    width: 988px;
+    position: relative;
+    z-index: 90;
+}
+
+.list_box_li {
+    width: 235px;
+    height: 405px;
+    display: inline;
+    float: left;
+    border: 1px solid #e6e6e6;
+    line-height: 18px;
+    margin: 5px 10px 10px 0;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+.list_box_li:hover {
+    border: 1px solid #7e32a9;
+}
+
+.list_box_con {
+    padding: 14px 14px 0 14px;
+}
+
+.list_box_con .gimg a img {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+.gimg {
+    vertical-align: middle;
+    display: block;
+}
+
+.gimg-min {
+    margin-top: 10px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.gimg-min img {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+
+.gimg-min ul li {
+    float: left;
+}
+
+.gimg-min li {
+    margin: 0 5px 5px 0;
+    float: left;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #DDDDDD;
+}
+
+.list_box_li a.gtitle {
+    line-height: 16px;
+    height: 32px;
+    margin: 10px auto;
+    font-size: 13px;
+    display: block;
+    width: 200px;
+    text-align: left;
+    overflow: hidden;
+
+}
+
+.gimg-min li.hov {
+    border: 1px solid #f60;
+}
+
+.through {
+    text-decoration: line-through;
+}
+
+.list_box_li p {
+    margin-bottom: 10px;
+    line-height: 15px;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+}
+
+.list_box_li p.deal-cnt em {
+    padding-left: 4px;
+    padding-right: 15px;
+    height: 21px;
+    background: none;
+    display: inline-block;
+}
+
+.buy {
+    border-top: 1px solid #ddd;
+}
+
+.buy .buyl {
+    width: 89px;
+    height: 35px;
+    line-height: 35px;
+    border-right: 1px solid #ddd;
+    background-position: center -11px;
+}
+
+.buy .buyr {
+    width: 145px;
+    height: 35px;
+    line-height: 35px;
+    background-position: center -59px;
+}
+
+.buy a {
+    background: url("../images/goods/pro-listico.jpg") no-repeat;
+    color: transparent;
+    text-align: center;
+    text-indent: -9999px;
+}
+
+.buyl:hover, .buyr:hover {
+    background: #7e32a9;
+    text-indent: 0;
+    color: #ffffff;
+}
+
+/*购物车弹出框样式*/
+#dialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: .4;
+    z-index: 9010;
+    display: none;
+}
+
+.dia-con {
+    width: 580px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9011;
+    background-color: #FFFFFF;
+    opacity: 1;
+    padding: 35px 0 0 86px;
+    display: none;
+}
+
+.smbtn span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFF;
+    background-position: left -212px;
+    padding-left: 20px;
+    float: left;
+    display: block;
+}
+
+.smbtn {
+    height: 32px;
+    line-height: 32px;
+    background-position: right -212px;
+    padding-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.smbtn {
+    line-height: 32px;
+}

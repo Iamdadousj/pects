@@ -1,0 +1,257 @@
+.bod {
+    background-color: #ffffff;
+}
+
+#header {
+    overflow: hidden;
+    margin: 0 auto;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.header {
+    width: 1100px;
+    padding: 30px 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.headfr {
+    float: left;
+}
+
+.headfr img {
+    vertical-align: middle;
+
+}
+
+.headfl {
+    float: right;
+    margin: 13px 5px 0 0;
+}
+
+.login {
+    color: #427fd2;
+}
+
+#regisFrm {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 55px;
+
+}
+
+#registM {
+    overflow: hidden;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.registext {
+    width: 516px;
+    margin-left: 228px;
+
+}
+
+.registext span {
+    font-size: 16px;
+    width: 96px;
+    display: inline-block;
+    text-align: right;
+}
+
+.registext input {
+    border: #ddd solid 1px;
+    height: 52px;
+    border-radius: 5px;
+    width: 413px;
+    color: #999;
+    text-indent: 16px;
+    font-size: 14px;
+}
+
+.userph {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.userph em{
+    position: absolute;
+    left: 520px;
+    width: 150px;
+    top: 0;
+    height: 42px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.userph .err {
+    font-size: 14px;
+    left: 520px;
+    top: 0;
+    width: 100px;
+    padding: 0 10px;
+    height: 54px;
+    line-height: 54px;
+    background: #fff3d9;
+    color: #ff6f4a;
+    text-align: left;
+}
+
+.userph input.error{
+    border: #ff6f4a solid 1px;
+    color: #ff6f4a;
+}
+
+.userph em.success{
+    background: url("../images/register/ok_03.jpg") no-repeat left center;
+}
+em.error{
+    font-size: 14px;
+    left: 520px;
+    top: 0;
+    padding: 0 10px;
+    height: 54px;
+    line-height: 54px;
+    background: #fff3d9;
+    color: #ff6f4a;
+    text-align: left;
+}
+.yzm input {
+    width: 200px;
+    margin-right: 5px;
+}
+
+.yzmc {
+    width: 200px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    height: 52px;
+    line-height: 52px;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+}
+
+.yzmc > img {
+    vertical-align: middle;
+    display: inline-block;
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+}
+
+.yzmc a {
+    display: inline-block;
+    width: 88px;
+    border-left: #ddd solid 1px;
+    position: absolute;
+    right: 9px;
+    font-size: 14px;
+}
+
+.yzmc a img {
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.yzmc #ram_id{
+    width: 88px;
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    background-image: url(../images/register/yzm.jpg);
+    background-position: center;
+    background-size: cover;
+    left:8px;
+    color: #ff3f00;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.dxyzm input {
+    width: 250px;
+    margin-right: 5px;
+}
+.Registerok {
+    right: -30px;
+    top: 15px;
+}
+.Registererror {
+    font-size: 14px;
+    left: 520px;
+    top: 0;
+    width: 100px;
+    padding: 0 10px;
+    height: 54px;
+    line-height: 54px;
+    background: #fff3d9;
+    color: #ff6f4a;
+}
+.dxbtn {
+    width: 149px;
+    border: #33cb98 solid 1px;
+    display: inline-block;
+    border-radius: 5px;
+    height: 52px;
+    line-height: 52px;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.dxbtn span {
+    text-align: center;
+}
+
+.dxbtn:hover {
+    background-color: #33cb98;
+    color: #ffffff;
+}
+
+.sure {
+    padding-left: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.sure input {
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+}
+
+.sure .xieyi {
+    display: inline-block;
+    font-size: 14px;
+    width: 232px;
+}
+
+.xieyi a {
+    color: #427fd2;
+}
+
+#submit {
+    display: block;
+    text-align: center;
+    line-height: 52px;
+    border-radius: 5px;
+    background: #33cb98;
+    width: 413px;
+    height: 52px;
+    margin: 15px 0 50px 100px;
+    font-size: 20px;
+    color: #ffffff;
+}
+.Registerfooter {
+    width: 820px;
+    padding: 70px 0;
+}
+.Registerfooter p{margin-top: 5px;}
+#resMes {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 12px;
+    top: 30px;
+    left: -25px;
+}

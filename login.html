@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>登录中心</title>
+    <script src="js/jquery1.8.3.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <link rel="icon" href="./images/favcio/favicon.ico" sizes="32x32" type="image/ico">
+    <link href="css/public.css" type="text/css" rel="stylesheet">
+    <link href="css/login.css" type="text/css" rel="stylesheet">
+    <link href="css/register.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <![endif]-->
+</head>
+<body class="bgwh" onselectstart="return false">
+<!--header-->
+<div id="header">
+    <div class="header">
+        <div class="headfr">
+            <a href="#"><img src="images/register/cart-logo.png"></a>
+        </div>
+        <div class="overflow fr Logonfr Loginlink">
+            <a href="index.html" class="ft14 c666 inblock">品牌特卖 </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="#" class="ft14 c666 inblock">试用中心 </a>
+        </div>
+    </div>
+
+</div>
+<!--main-->
+<div id="logmain" class="bgwh rela">
+    <div class="ovh ct pa logbg">
+        <form id="login-form" action=" " method="post">
+            <div class="logind pa" id="logind">
+                <div class="overflow logintab">
+                    <span class="fl ftc ft14 c999 Logindefalut">普通登录</span>
+                    <span class="fl ftc ft14 c999">手机动态密码登录</span>
+                </div>
+                <div class="overflow logincontent rela" id="logininput">
+                    <div class="w100 ftc cred ft12 pa " id="backinfo"></div>
+                    <!--普通登录-->
+                    <div id="login_0" style="display:block">
+                        <div class="overflow Loginuser">
+                            <span class="inblock Loginico Uderico"></span>
+                            <input class="ft14 c999 Userinput" name="userID" id="user0" value=""
+                                   placeholder="手机号/邮箱/用户名" type="text">
+                        </div>
+                        <div class="overflow Loginuser">
+                            <span class="inblock Loginico Uderico Pwdico"></span>
+                            <input class="ft14 c999 Userinput logpass" name="password" id="password0" value=""
+                                   placeholder="密码" type="password">
+                        </div>
+                    </div>
+                    <!--手机动态登录-->
+                    <div class="overflow Logoincontent" id="login_1" style="display:none;">
+                        <div class="overflow Loginuser">
+                            <span class="inblock Loginico Uderico phoneico"></span>
+                            <input class="ft14 c999 Userinput" name="mobelphonel" id="user1" value="" placeholder="已注册的手机号" type="text">
+                        </div>
+                        <div class="overflow Loginuser varify">
+                            <span class="inblock Loginico Uderico varifyico"></span>
+                            <input class="ft14 c999 Userinput" style="width: 150px;" name="varify" id="varify" value="" placeholder="验证码" type="text">
+                        </div>
+                        <div class="varifyimg" id="varifyimg">
+                        </div>
+                        <div class="overflow Loginuser logphonecode">
+                            <span class="inblock Loginico Uderico codeico"></span>
+                            <input class="ft14 c999 Userinput" style="width: 150px;" id="dt_password" name="dt_password" value="" placeholder="动态码" type="text">
+                        </div>
+                        <div class="overflow Loginuser phonecodebtn" id="phonecodebtnlogin">
+                            <span>获取动态密码</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overflow mt20 logintext">
+                    <input type="checkbox" checked="checked" class="">
+                    <span class="ft14 c666">自动登录</span>
+                    <a class="fr c666 ft14 dib" href="javascript:;">忘记密码？</a>
+                </div>
+                <a class="ftc dib ft20 cfff loginbtn" href="javascript:;" target="_bank" id="loginbtn">登 &nbsp;&nbsp;&nbsp; 录</a>
+                <div class="ovh hezuo">
+                    <div class="fl overflow">
+                        <span class="ft14 c666">合作登录网站：</span>
+                        <div class="mt overflow hzlist">
+                            <a class="inblock hzicon qqicon" href="javascript:;"></a>
+                            <a class="inblock hzicon zfbicon" href="javascript:;"></a>
+                            <a class="inblock hzicon xlicon" href="javascript:;"></a>
+                            <a class="inblock hzicon wxicon" href="javascript:;"></a>
+                        </div>
+                    </div>
+                    <a href="register.html" target="_blank" class="fr dib ft14 c666">注册账号</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--footer-->
+<div class="overflow ct Registerfooter ftc">
+    <a class="c999" href="index.html">E宠商城 |</a>
+    <a class="c999" href="#">知识 |</a>
+    <a class="c999" href="#">关于我们 |</a>
+    <a class="c999" href="#">联系我们 </a>
+    <p class="c999 ftc">渝ICP备13005525号-2 &nbsp; 渝ICP备 10002905&nbsp;增值电信业务经营许可证：渝B2-20140042&nbsp;Copyright © 2007-2016 epet.com&nbsp;重庆易宠科技有限公司&nbsp;</p>
+</div>
+</body>
+<script src="js/gVerify.js" type="text/javascript"></script>
+<!--canvas验证码绘制-->
+<script type="text/javascript">
+    var verifyCode = new GVerify("varifyimg");
+    document.getElementById("phonecodebtnlogin").onclick = function(){
+        var res = verifyCode.validate(document.getElementById("varify").value);
+        if(res){
+            alert("验证正确");
+        }else{
+            alert("验证码错误");
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(".logintab").on("click", "span", function () {
+            $(this).addClass("Logindefalut").siblings().removeClass("Logindefalut");
+            if ($(this).index() == 0) {
+                $("#login_0").css("display", "block").siblings().css("display", "none");
+            } else {
+                $("#login_1").css("display", "block").siblings().css("display", "none");
+            }
+        });
+        $("#loginbtn").click(function () {
+            $("#backinfo").text("");
+            $.post("js/shopdata/userinfo.php", {
+                        status: "login",
+                        userID: $("#user0").val(),
+                        password: $("#password0").val()
+                    },
+                    function (res) {
+                        switch (res) {
+                            case "0":
+                                $("#backinfo").text("用户名不存在！");
+                                break;
+                            case "1":
+                                $("#backinfo").text("用户名与密码不符！");
+                                break;
+                            default:
+                                $.cookie("username", $("#user0").val());
+                                window.location.href = "index.html";
+                        }
+                    })
+        })
+    });
+</script>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="text/html">
+    <title>【E宠商城】品质养宠，尽在E宠 </title>
+    <link rel="icon" href="images/favcio/favicon.ico" sizes="32x32" type="image/ico">
+    <link rel="stylesheet" href="css/public.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/city-picker.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery1.8.3.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <![endif]-->
+</head>
+<body onselectstart="return false">
+<div id="log"></div>
+<!--topbar 模块-->
+<header><div class="topbar" id="topbar">
+<div class="w-max ct">
+<div class="header_lt fl">
+    <p><a  class="home" href="index.html">E宠首页</a></p>
+    <p class="clearfix"></p>
+    <div class="fl place_send">送至：</div>
+    <div class="rela main_place fl">
+        <div class="rela box_place">
+        <div class="rela c666 mt1 show_place bgwhite pointer">
+            <div class="clearfix str_place"><input readonly type="text" data-toggle="city-picker" placeholder="地址"></div>
+        </div>
+    </div>
+    </div>
+    <p><a href="#" class="cf60 epetbrand">E宠就是正品</a></p>
+    <p><a href="#">评价(<span class="cf60">608.4万</span>)</a></p>
+</div>
+    <ul class="header_topri fr clearfix">
+        <li><a class="cred" href="#">问题反馈</a></li>
+        <li class="phone">
+            <i></i>
+            <a class="" href="#">手机版</a>
+            <img src="images/code.png" class="pa code-img hide" style="width:80px;" />
+        </li>
+        <li class="collect">
+            <p class="topgz"><span>收藏我</span><b></b></p>
+            <div class="probox " style="">
+                <a class="btn" id="sc" href="javascript:;"><span>加入收藏夹</span></a>
+                <a class="btn" href="#" onclick=" toDesktop(location.href,'index.html')"><span>保存到桌面</span></a>
+            </div>
+        </li>
+        <li class="myepet">
+            <i></i>
+            <p class="topgz fl"><span><a href="#">我的E宠</a></span><b></b></p>
+            <div class="myec_tc " style="">
+                <a href="#">我的订单</a>
+                <a href="#">VIP俱乐部</a>
+                <a href="#">充值得优惠</a>
+                <a href="#">推荐得惊喜</a>
+            </div>
+        </li>
+        <li class="cart-t"><i></i><a href="cart.html">购物车(<em class="cart_num">0</em>)</a></li>
+        <li id="register"><a href="register.html" target="_blank">[注册]</a></li>
+        <li id="register1" style="display: none;"><a href="javascript:;" onclick="quit();">退出</a></li>
+        <li><a href="login.html" target="_blank" id="h-login">[登录]</a></li>
+    </ul>
+</div>
+</div>
+</header>
+<!--search 模块-->
+<div id="head1" class="bgwh">
+    <div class="head1">
+        <div class="logo">
+            <a href="index.html"></a>
+        </div>
+        <form action="" class="fl" id="sechform">
+            <ul class="sch-list"></ul>
+            <div class="schib">
+                <input type="text" placeholder="关键字">
+                <button type="submit" value="1">搜索</button>
+            </div>
+            <div class="keywords">
+                <label>热门搜索：</label>
+                <a class="cred" href="#">麦德氏</a><span>|</span> <a
+                    href="#">纯皓</a><span>|</span> <a
+                    href="#">百利本能猫粮</a><span>|</span> <a
+                    href="#">百娜绮9折</a><span>|</span> <a
+                    href="#">皇室猫粮</a></div>
+        </form>
+        <div class="fl phonecode">
+        </div>
+        <div class="go-buy fr">
+            <a class="c666" href="cart.html">购物车(<em class="cart_num">0</em>)</a>
+        </div>
+    </div>
+</div>
+<!--左侧导航 模块-->
+<div id="nav" class="bgwh">
+    <div class="nav clearfix">
+        <div class="nav-list fl">
+            <div class="main-title">
+                <span class="epet-type">猫猫<b class="cate1"></b></span>
+                <span class="hov" id="titles">商品分类<b class="cate2"></b></span>
+            </div>
+            <div id="main-list">
+                <!--左边详细列表-->
+                <div class="main-list-l">
+                    <!--宠物分类-->
+                    <div class="list-type pet-cate" style="display:none;">
+                        <dl>
+                            <dd class="p-ph">
+                                <a href="#"><span></span></a>
+                               <span>
+                                   <p>22023种精选宝贝</p>
+                                <a href="#" class="p-link">点击切换</a>
+                                </span>
+                                <div class="finish_one"><a href="#"><img src="images/dogpack.jpg" /></a></div>
+                            </dd>
+                            <dd class="p-mm catnow hov">
+                                <a href="#"><span class="catnow"></span></a>
+                               <span>
+                                   <p>10452种精选宝贝</p>
+                                <a href="#" class="p-link" onclick="alert('当前站为猫猫站')">你正在猫猫站溜达</a>
+                                   </span>
+                                <div class="finish_two"><a href="#"><img src="images/catpack.jpg" /></a></div>
+                            </dd>
+                            <dd class="p-fish">
+                                <a href="#"><span class="catnow"></span></a>
+                               <span>
+                                   <p>1192种精选宝贝</p>
+                                <a href="#" class="p-link">切换到水族站</a>
+                                   </span>
+                                <div class="finish_three"><a href="#"><img src="images/fishpack.jpg" /></a></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--商品分类-->
+                    <div class="detype rela" style="display: block;">
+                        <ul class="clearfix">
+                            <li class="">
+                                <h3><span class="menuIcoBg menu1"></span>
+                                    <a href="#">主粮<i>326</i></a> 
+                                    <a href="#">零食<i>245</i></a>
+                                </h3>
+                            </li>
+                            <li class="">
+                                <h3><span class="menuIcoBg menu2"></span>
+                                    <a href="#">日用<i>526</i></a> 
+                                    <a href="#">玩具<i>145</i></a>
+                                </h3>
+                            </li>
+                            <li class="">
+                                <h3><span class="menuIcoBg menu3"></span>
+                                    <a href="#">保健<i>116</i></a> 
+                                    <a href="#">医疗<i>245</i></a>
+                                </h3>
+                            </li>
+                            <li class="">
+                                <h3><span class="menuIcoBg menu4"></span>
+                                    <a href="#">美容<i>56</i></a> 
+                                    <a href="#">香波<i>51</i></a>
+                                </h3>
+                            </li>
+                            <li class="">
+                                <h3><span class="menuIcoBg menu5"></span>
+                                    <a href="#">出行<i>41</i></a> 
+                                    <a href="#">装扮<i>535</i></a>
+                                </h3>
+                            </li>
+                            <li class="">
+                                <h3><span class="menuIcoBg menu6"></span>
+                                    <a href="#">书籍<i>422</i></a> 
+                                    <a href="#">杂志<i>51</i></a>
+                                </h3>
+                            </li>
+                        </ul>
+                        <!--活动-->
+                        <p onclick="alert('尽情期待')" class="pet-active">
+                            <img src="images/active.png">正在进行的品牌特卖<a>8</a>
+                        </p>
+                    </div>
+                </div>
+                <!--rightList-->
+                <div class="main-list-r">
+                    <div class="cate-l">
+                    </div>
+                </div>
+                <!--正在进行的活动-->
+                <div class="cate-action clearfix ">
+                    <div class="action-slider">
+                        <ul>
+                            <li>
+                                <p><a href="#" target="_blank">
+                                    <img alt="洗澡啦，喵君哪里逃" src="images/a9.jpg"></a>
+                                    <span>洗澡啦，喵君哪里逃</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="act-click">
+                        <a href="javascript:;" class="act-prev"><b></b></a>
+                        <span id="act-now"></span>/<span id="act-page"></span>
+                        <a href="javascript:;" class="act-next"><b></b></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <ul class="menus">
+            <li><a href="index.html" class="mns"><img src="images/epethk-logo.png" class="epethk-logoimg"/></a></li>
+            <li><a target="_blank" class="mns" href="index2.html"><b></b>品牌特卖</a></li>
+            <li><a target="_blank" class="mns" href="video.html"><b></b>潮品视频</a></li>
+            <li><a target="_blank" class="mns" href="#"><b></b>服饰城</a><img src="images/new.gif" style="margin: -8px 10px 0 -25px;"></li>
+            <li><a target="_blank" class="mns" href="#"><b></b>E宠课堂</a></li>
+            <li><a target="_blank" class="mns" href="#"><b></b>体验馆</a></li>
+            <li><a target="_blank" class="mns" href="#"><b></b>清仓特价</a></li>
+        </ul>
+    </div>
+</div>
+<!--右侧固定栏-->
+<div id="rtbar" style="right: 0; top: 0; opacity: 1;">
+    <div class="rtcont rela">
+        <ul class="rtcont-up rela" data-name="rtbar" style="height: 472px; top: 30px;">
+            <li class="rtl bagLi">
+                <div class="bagBox" style="display: none;">
+                    <div style="text-align: center;color: #000;padding: 50px 0;">
+                        您还没有登录，请先
+                        <a href="login.html" style="text-decoration: underline;color: red;">登录</a>。
+                    </div>
+                </div>
+                <a class="rtico rt-my" href="">
+                </a>
+            </li>
+            <li class="scart rtl">
+                <!--<div class="newdot"></div>-->
+                <div class="bagBox" style="display: none;">
+                    <div style="text-align: center;color: #000;padding: 50px 0;">
+                        您还没有登录，请先
+                        <a href="login.html" style="text-decoration: underline;color: red;">登录</a>。
+                    </div>
+                </div>
+                <label>购物车<em>◆</em></label>
+                <a class="rtico rt-cart" href="cart.html">
+                    <span class="rtico rt-cart"></span>
+                    <div class="rt-cart-num">购物车
+                        <span>0</span>
+                    </div>
+                </a>
+            </li>
+            <li class="sconsulted rtl consolutBox">
+                <div class="bagBox" style="display: none;">
+                    <div style="text-align: center;color: #000;padding: 50px 0;">
+                        您还没有登录，请先
+                        <a href="login.html" style="text-decoration: underline;color: red;">登录</a>。
+                    </div>
+                </div>
+                <a class="rtico rt-consulted" href="javascript:;">
+                    <span class="rtico rt-consulted"></span>
+                    <div class="rt-consulted-qus">在线客服</div>
+                </a>
+            </li>
+            <li class="rtl hov pointer">
+                <div class="bagBox" style="display: none;">
+                    <div style="text-align: center;color: #000;padding: 50px 0;">
+                        您还没有登录，请先
+                        <a href="login.html" style="text-decoration: underline;color: red;">登录</a>。
+                    </div>
+                </div>
+                <a class="rtico rt-order"></a>
+            </li>
+            <li class="sview rtl">
+                <a class="rtico rt-view"></a>
+            </li>
+        </ul>
+        <ul class="rtcont-dn rela" style="display: block;">
+            <li class="rtl hov">
+                <a class="rtico rt-weixin" href="javascript:void(0);" rel="nofollow"><span></span>
+                </a>
+            </li>
+            <li class="rtl hov">
+                <a class="rtico rt-weibo" href="" target="_blank" rel="nofollow"><span></span></a>
+            </li>
+            <li class="rtl hov">
+                <label style="opacity: 0; right: 53px; display: none;">返回顶部<em>◆</em></label>
+                <a class="rtico rt-top" id="toTop" href="javascript:void(0);" style="visibility: visible;"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--js 部分-->
+<script src="js/city-picker.data.js"></script>
+<script src="js/city-picker.js"></script>
+<script src="js/ajaxsp.js"></script>
+<script>
+  $(function(){
+      var ycs=$(".collect #sc");
+      ycs.on("click", function () {
+          if(!chicklogin()){
+              alert("请先登录陆");
+              return;
+          }
+      });
+  })
+</script>
+</body>
+</html>

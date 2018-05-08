@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>【E宠商城】品质养宠，尽在E宠 </title>
+    <link rel="icon" href="./images/favcio/favicon.ico" sizes="32x32" type="image/ico">
+    <link rel="stylesheet" href="css/public.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
+    <link rel="stylesheet" href="css/public.css" type="text/css">
+    <script src="js/jquery1.8.3.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/cart.js" type="text/javascript"></script>
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="js/PIE.js"></script>
+    <![endif]-->
+</head>
+<body class="bgwh" onselectstart="return false">
+<!--header-->
+<div id="header">
+    <div class="header">
+        <div class="headfr">
+            <a href="index.html" class="fl"><img src="images/register/cart-logo.png"></a>
+            <span class="fl c333 ml ft24 cart-text">购物车</span>
+        </div>
+        <div class="headfl fr mt20 clearfix">
+            <input type="text" class="sear-text">
+            <a href="javascript:;" class="fr cfff ftc">搜索</a>
+        </div>
+    </div>
+
+</div>
+<!--main-->
+<div id="main" class="w-max ct">
+    <div id="cart-menu">
+        <ul class="cart-menu clearfix nav-menu">
+            <li id="one1" class="current">购物车<em class="fcolor ml5 cart_num">0</em></li>
+            <li id="one2">我的收藏<em class="fcolor ml5 cart_s">0</em></li>
+            <li id="one3">我购买过<em class="fcolor ml5">0</em></li>
+            <li id="one4">最近浏览<em class="fcolor ml5">0</em></li>
+        </ul>
+        <div class="nav-currentt" style="width: 122px; left: 0px; overflow: hidden;">
+            <div class="arrow ftc"><i></i></div>
+        </div>
+    </div>
+    <div class="contantBox">
+        <table class="mt cart-table mb30" style="display: none" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+            <tr>
+                <td class="tabF" colspan="5">
+                    <input type="checkbox" checked class="fl mt5" id="check">
+                    <span class="fl cfff ml5 epetfh ft13">西部大仓</span>
+                    <b id="help" class="fl mt5 ml rela pointer  help">
+                        <img src="images/cart/help.jpg">
+                        <div class="cart-tc bgwh">
+                            <em></em>
+                            <i></i>
+                            <p class="c333 ft12">以下商品由重庆仓发货，支持余额支付、货到付款、在线支付，全国满99包邮，部分地区满38包邮。</p>
+                        </div>
+                    </b>
+                    <div class="baoyou-tip ymbaoyou-tip fl ml25 mt5 c666">
+                        <span>已包邮</span> 订单已包邮 (顺丰、EMS不包邮)
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="pt30 pb10">
+                    <div class="balance">
+                        <div class="w-max ct">
+                            <div class="fl c333 pl10">
+                                <label class="mr20">
+                                    <input class="all-checkbox" checked type="checkbox">全选
+                                </label>
+                                <a href="javascript:;" class="c333">[ 删除选中商品 ]</a>
+                                <a href="javascript:;" class="c333 ml5">[ 收藏选中商品 ]</a>
+                            </div>
+                            <div class="fr cart-price">
+                                总价（不含运费）:<strong class="ft18" id="ccont">￥123.00</strong>
+                                <a href="javascript:;" class="cfff go-balance ftc bold ft18 ml20 bggreen">去结算(<em id="nnum"></em>)</a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="mt">
+                    <a class="detail db" href="detail.html">继续购物</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="ftc">
+            <div class="null">
+                <h1 class="ft30 c999">您的购物车空空如也，快去选购吧 =￣ω￣=</h1>
+                <div class="goBtn mt5">
+                    <a href="goodslist.html">列表页</a>
+                    <a href="index.html">去首页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--foot-->
+<div id="footer"></div>
+</body>
+<script>
+    $(function () {
+        $("#footer").load("footer.html", function () {
+            refresh();
+        });
+    })
+</script>
+<script>
+    //nav 导航小样式
+    $(function () {
+        $(".cart-menu").on("mouseenter", "li", function () {
+            $(".nav-currentt").stop(true).animate({
+                left: ($(this).offset().left - 30),
+                width: $(this).outerWidth()
+            }, 300, "swing")
+        });
+        $(".cart-menu").on("mouseleave", function () {
+            $(".nav-currentt").stop(true).animate({
+                left: 0,
+                width: $(this).children().eq(0).outerWidth()
+            }, 300, "swing")
+        })
+    });
+</script>
+<script>
+    // 全局刷新购物车页面的商品
+    var cart_re = function () {
+        var cont = 0;
+        var ccont = 0;
+        var nnum = 0;
+        var goodsStr = $.cookie("goods");
+        var goodsSstr = $.cookie("goodsS");
+        if (goodsStr) {
+            var goods = $.parseJSON($.cookie("goods"));
+            if ((goods.length != 0)) {
+                var num = goods.length;
+                $(".cart-table").css("display", "block").siblings().css("display", "none");
+                $.get("js/goodslist.json", function (res) {
+                    var trs = '';
+                    for (var i in goods) {
+                        for (var j in res) {
+                            if (res[j].id == goods[i].id) {
+                                cont = (res[j].price[1] * goods[i].num);
+                                cont = Math.round(cont * 100) / 100;
+                                nnum += goods[i].num;
+                                ccont += cont;
+                                var conts
+                                if (parseInt(goods[i].num) > 1) {
+                                    conts = cont + '<p class="c89">￥' + res[j].price[1] + '/件</p>'
+                                } else {
+                                    conts = cont;
+                                }
+                                trs += '<tr class="cart-order" data-id="' + res[j].id + '">' +
+                                        '<td width="50" align="center">' +
+                                        '<input  checked="checked" type="checkbox">' +
+                                        '</td>' +
+                                        '<td width="500" valign="middle">' +
+                                        '<div class="por-img fl overflow bgwhite ftc">' +
+                                        '<a href="#" target="_blank" class="toDetail">' +
+                                        '<img src="' + res[j].imgs[0] + '" style="width: 80px;">' +
+                                        '</a>' +
+                                        '</div>' +
+                                        '<div class="por-intro fl ml20 mt" style="margin-top: 30px;">' +
+                                        '<a target="_blank" href="#" class="c333 toDetail">' + res[j].tip + '</a>' +
+                                        '</div>' +
+                                        '<div class="clear"></div>' +
+                                        '</td>' +
+                                        '<td style="padding-top:20px;" width="150" align="center">' +
+                                        '<div class="buynum-wrap clearfix">' +
+                                        '<span id="less1" class="ft18 fl ">-</span>' +
+                                        '<input readonly="true"  class="text buynum ftc fl bgwhite" value="' + goods[i].num + '" id="num" size="2" type="text">' +
+                                        '<span id="add1" class="fl ">+</span>' +
+                                        '</div>' +
+                                        '<p class="c666 mtneg10">有货</p>' +
+                                        '</td>' +
+                                        '<td class="c000 bold ft14" width="200" align="center">￥' + conts + '</td>' +
+                                        '<td width="200" align="center">' +
+                                        '<a href="javascript:;" class="c666">[收藏]</a>' +
+                                        '<a href="javascript:;" class="c666">[删除]</a>' +
+                                        '</td>' +
+                                        '</tr>';
+                                break;
+                            }
+                        }
+                    }
+                    ccont = Math.round(ccont * 100) / 100;
+                    $(".cart-table>tbody").html('<tr>' +
+                            '<td class="tabF" colspan="5">' +
+                            '<input type="checkbox" checked class="fl mt5" id="check">' +
+                            '<span class="fl cfff ml5 epetfh ft13">西部大仓</span>' +
+                            '<b class="fl mt5 ml rela pointer tHelp">' +
+                            '<img src="images/cart/help.jpg">' +
+                            '<div class="cart-tc bgwh">' +
+                            '<em></em><i></i>' +
+                            '<p class="c333 ft12">' +
+                            '以下商品由重庆仓发货，支持余额支付、货到付款、在线支付，全国满99包邮，部分地区满38包邮。</p>' +
+                            '</div>' +
+                            '</b>' +
+                            '<div class="baoyou-tip ymbaoyou-tip fl ml25 mt5 c666">' +
+                            '<span>已包邮</span> 订单已包邮（顺丰、EMS不包邮）</div>' +
+                            '</td>' +
+                            '</tr>' + trs + '<tr>' +
+                            '<td colspan="5" class="pt30 pb10">' +
+                            '<div class="balance">' +
+                            '<div class="w-max ct">' +
+                            '<div class="fl c333 pl10">' +
+                            '<label class="mr20">' +
+                            '<input class="all-checkbox" checked type="checkbox">全选</label>' +
+                            '<a href="javascript:;" class="c333">[ 删除选中商品 ]</a>' +
+                            '<a href="javascript:;" class="c333 ml5">[ 收藏选中商品 ]</a>' +
+                            '</div>' +
+                            '<div class="fr cart-price">总价（不含运费）:' +
+                            '<strong class="ft18" id="ccont">￥123.00</strong>' +
+                            '<a href="javascript:;" class="cfff go-balance ftc bold ft18 ml20 bggreen">去结算' +
+                            '(<em id="nnum"></em>)' +
+                            '</a>' +
+                            '</div>' +
+                            '<div class="clear"></div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</td>' +
+                            '</tr>' +
+                            '<tr>' +
+                            '<td class="mt">' +
+                            '<a class="detail" href="goodslist.html">继续购物</a>' +
+                            '</td>' +
+                            '</tr>');
+                    if (!goodsSstr) {
+                        $.cookie("goodsS", "[]");
+                    }
+                    var goodsS = $.parseJSON($.cookie("goodsS"));
+                    $(".cart_s").text(goodsS.length);
+                    $(".cart_num").text(num);
+                    $("#ccont").text("￥" + ccont);
+                    $("#nnum").text(nnum);
+                    //吸底
+                    var top = $(".balance").offset().top - window.innerHeight + $(".balance").innerHeight();
+                    console.log(top);
+                    if ($("body").scrollTop() < top) {
+                        $(".balance").addClass("fixbox")
+                    } else {
+                        $(".balance").removeClass("fixbox");
+                    }
+                    $(window).resize(function () {
+                        top = $(".balance").offset().top - window.innerHeight + $(".balance").innerHeight();
+                        if ($("body").scrollTop() < top) {
+                            $(".balance").addClass("fixbox")
+                        } else {
+                            $(".balance").removeClass("fixbox");
+                        }
+                    });
+                    $(window).scroll(function () {
+
+                        if ($("body").scrollTop() < top) {
+                            $(".balance").addClass("fixbox")
+                        } else {
+
+                            $(".balance").removeClass("fixbox");
+                        }
+                    })
+                });
+            } else {
+                $(".cart-table").css("display", "none").siblings().css("display", "block");
+            }
+        } else {
+            $.cookie("goods", "[]");
+            $.cookie("goodsS", "[]");
+        }
+    };
+    cart_re();
+    $(function () {
+        //点击删除处理
+        $(".cart-table").on("click", "tbody>tr>td>a", function (e) {
+            //console.log($(this).text());
+            var goods = $.parseJSON($.cookie("goods"));
+            var id = $(this).parents(".cart-order").attr("data-id");
+            if ($(this).text() == "[删除]") {
+                for (var i in goods) {
+                    if (goods[i].id == id) {
+                        goods.splice(i, 1);
+                    }
+                }
+                $.cookie("goods", JSON.stringify(goods));
+                refresh();
+                cart_re();
+            }
+        });
+        //点击跳转到详情页并设置cookie
+        $(".cart-table").on("click", ".toDetail", function () {
+            var id = $(this).parents("tr").attr("data-id");
+            //console.log(id);
+            $.cookie("detail-id", id);
+            $(this).prop("href", "detail.html");
+        })
+    })
+</script>
+<script>
+    //点击checkbox刷新总额和总金币
+    function refresh_cont() {
+        var goods = $.parseJSON($.cookie("goods"));
+        var checks = $(".cart-table").find("input[type=checkbox]");
+        var idArr = [];
+        var nnum = 0;
+        var ccont = 0;
+        for (var i = 1; i < checks.length; i++) {
+            console.log(checks.eq(i)[0].checked);
+            if (checks.eq(i)[0].checked) {
+                if (checks.eq(i).parents("tr").attr("data-id")) {
+                    idArr.push(checks.eq(i).parents("tr").attr("data-id"));
+                }
+            }
+        }
+        $.get("js/goodslist.json", function (res) {
+            for (var i in goods) {
+                for (var j in res) {
+                    if (res[j].id == goods[i].id) {
+                        for (var k in idArr) {
+                            if (idArr[k] == res[j].id) {
+                                //console.log(idArr[k]);
+                                ccont += (res[j].price[1] * goods[i].num)
+                                nnum += parseInt(goods[i].num);
+                                break;
+                            }
+
+                        }
+                        break;
+                    }
+                }
+            }
+            ccont = Math.round(ccont * 100) / 100;
+            $("#ccont").text("￥" + ccont);
+            $("#nnum").text(nnum);
+        })
+    }
+    //点击加减span处理金额变化
+    $(function () {
+        $(".cart-table").on("click", "tbody>tr>td>div>span", function () {
+            // console.log($(this));
+            var k = $(this).next().val();
+            var id = $(this).parents("tr").attr("data-id");
+            var goods = $.parseJSON($.cookie("goods"));
+            var checked = $(this).parents("tr").find("input[type=checkbox]").is(":checked");
+            var that = this;
+            var cont = parseFloat($(this).parents("tr").children().eq(3).text().substr(1));
+            // console.log(cont);
+            var ccont = parseFloat($("#ccont").text().substr(1));
+            var nnum = $("#nnum").text();
+            $.get("js/goodslist.json", function (res) {
+                for (var i = 0; i < goods.length; i++) {
+                    if (goods[i].id == id) {
+                        for (var j in res) {
+                            if (res[j].id == id) {
+                                if ($(that).text() == '-') {
+                                    k = $(that).next().val();
+                                    if ($(that).next().val() > 1) {
+                                        k--;
+                                        nnum--;
+                                        $(that).next().val(k);
+                                        goods[i].num = k;
+                                        cont -= res[j].price[1];
+                                        ccont -= res[j].price[1];
+                                        cont = Math.round(cont * 100) / 100;
+                                        ccont = Math.round(ccont * 100) / 100;
+                                        //refresh()
+                                    }
+                                    // console.log($(this).next().val());
+                                } else if ($(that).text() == '+') {
+                                    k = $(that).prev().val();
+                                    if ($(that).prev().val() < 99) {
+                                        k++;
+                                        nnum++;
+                                        $(that).prev().val(k);
+                                        goods[i].num = k;
+                                        cont += parseFloat(res[j].price[1]);
+                                        ccont += parseFloat(res[j].price[1]);
+                                        cont = Math.round(cont * 100) / 100;
+                                        ccont = Math.round(ccont * 100) / 100;
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+                $.cookie("goods", JSON.stringify(goods));
+                refresh();
+                $(that).parents("tr").children().eq(3).text("￥" + cont);
+                if (checked) {
+                    $("#ccont").text("￥" + ccont);
+                    $("#nnum").text(nnum);
+                }
+            });
+
+        })
+    })
+</script>
+<script>
+    //显示隐藏tip
+    $(function () {
+        $(".cart-table").on("mouseenter", ".tHelp", function () {
+            $(this).children("div").stop(true).fadeIn(200);
+        });
+        $(".cart-table").on("mouseleave", ".tHelp", function () {
+            $(this).children("div").stop(true).fadeOut(200);
+        });
+        $(".cart-table").on("click", ".all-checkbox", function () {
+            //console.log(this.checked);
+            var checks = $(this).parents("tbody").find("input[type=checkbox]").not('.all-checkbox');
+            if (this.checked) {
+                // checks.prop("checked", true);
+                for (var i = 0; i < checks.length; i++) {
+                    checks.eq(i)[0].checked = true;
+                }
+            } else {
+                //checks.prop("checked", false);
+                for (var i = 0; i < checks.length; i++) {
+                    checks.eq(i)[0].checked = false;
+                }
+            }
+        });
+        $(".cart-table").on("click", "input[type=checkbox]", function () {
+            //console.log(1);
+            refresh_cont();
+        })
+    })
+   // 刷新refresh
+     function refresh(){
+        if($.cookie("refresh")!="no"){
+            setTimeout(function(){
+                window.location.reload();
+                $.cookie("refresh","no");
+            },5000);
+        }
+    }
+
+</script>
+</html>
