@@ -129,7 +129,7 @@
         });
         $("#loginbtn").click(function () {
             $("#backinfo").text("");
-            $.post("js/shopdata/userinfo.php", {
+            $.post("./js/shopdata/userinfo.php", {
                         status: "login",
                         userID: $("#user0").val(),
                         password: $("#password0").val()
